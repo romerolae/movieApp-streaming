@@ -10,8 +10,11 @@ const getAllMovies = (req, res) =>{
 
 	const limit = Number(req.query.limit) || 10
 
+	//? Search
+	const search = req.query.search
+
 	
-    movieControllers.findAllMovies(limit, offset)
+    movieControllers.findAllMovies(limit, offset, search)
     .then(data=>{
 		const nextPageUrl = data.count - offset > limit ? `${host}/api/v1/movies?offset=${offset + limit}&limit=${limit}` : null
 		const prevPageUrl =
