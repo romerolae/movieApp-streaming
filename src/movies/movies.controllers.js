@@ -36,7 +36,6 @@ const findAllMovies = async (limit, offset, search)=>{
     }
 
 
-
     const data = await Movies.findAndCountAll(queryOptions)
     return data
 }

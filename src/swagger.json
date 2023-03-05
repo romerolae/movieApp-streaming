@@ -1,0 +1,21 @@
+{
+    "swagger": "2.0",
+    "info":{
+        "title": "My API about movies and series similar to Netflix",
+        "version": "1.0.0"
+    },
+    "paths":{
+        "/api/v1/movies": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "To get all my users"
+                    },
+                    "400":{
+                        "description": " There was an error while trying to get all users"
+                    }
+                }
+            }
+        }
+    }
+}
